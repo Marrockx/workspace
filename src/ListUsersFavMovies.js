@@ -7,8 +7,8 @@ class ListUsersFavMovies extends Component {
 		return (
 			<div>
 				<ol className='movies-list'>
-					{this.props.profiles.map(
-						(profile, userName, favoriteMovie) => (
+					{this.props.profiles.map((profile, userName, favoriteMovie) => {
+						return (
 							[
 								(userName = this.props.users[profile.userID].name),
 								(favoriteMovie =
@@ -23,8 +23,8 @@ class ListUsersFavMovies extends Component {
 									</div>
 								</li>
 							)
-						)
-					)}
+						);
+					})}
 				</ol>
 			</div>
 		);
